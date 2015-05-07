@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">CustomArrayAdapter</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+
+    <string-array name="countries">
+        <item>"Бразилия"</item>
+        <item>"Аргентина"</item>
+        <item>"Колумбия"</item>
+        <item>"Уругвай"</item>
+        <item>"Чили"</item>
+    </string-array>
+
+    <string-array name="capitals">
+        <item>"Бразилиа"</item>
+        <item>"Буэнос-Айрес"</item>
+        <item>"Богота"</item>
+        <item>"Монтевидео"</item>
+        <item>"Сантьяго"</item>
+    </string-array>
+
+    <string-array name="flags">
+        <item>brasil</item>
+        <item>argentina</item>
+        <item>columbia</item>
+        <item>uruguay</item>
+        <item>chilie</item>
+    </string-array>
+
+</resources>
