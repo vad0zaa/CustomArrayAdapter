@@ -12,6 +12,14 @@
         <item>"Чили"</item>
     </string-array>
 
+    <string-array name="population">
+        <item>"население Бразилии примерно 200 000 000 человек"</item>
+        <item>"Население Аргентины — 40 млн человек"</item>
+        <item>"Численность населения Колумбии в 2003 году составила 41,66 млн человек"</item>
+        <item>"Уругвай. Численность населения — 2 млн 830 тыс. чел"</item>
+        <item>"Чили - население страны составляет около 15 млн. человек"</item>
+    </string-array>
+
     <string-array name="capitals">
         <item>"Бразилиа"</item>
         <item>"Буэнос-Айрес"</item>
@@ -27,5 +35,6 @@
         <item>uruguay</item>
         <item>chilie</item>
     </string-array>
+    <string name="title_activity_info">InfoActivity</string>
 
 </resources>

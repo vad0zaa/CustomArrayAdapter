@@ -13,6 +13,14 @@
         <item>"Chili"</item>
     </string-array>
 
+    <string-array name="population">
+        <item>"Brazil's population is about 200 million people"</item>
+        <item>"Argentine population - 40 million people"</item>
+        <item>"The population of Colombia in 2003 was 41.66 million people"</item>
+        <item>"Uruguay. Population - 2 million 830 thousand people"</item>
+        <item>"Chile - the country's population is about 15 million people"</item>
+    </string-array>
+
     <string-array name="capitals">
         <item>"Brazilia"</item>
         <item>"Buenos-Airez"</item>

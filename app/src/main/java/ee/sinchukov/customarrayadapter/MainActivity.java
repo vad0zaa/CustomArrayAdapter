@@ -1,5 +1,7 @@
 package ee.sinchukov.customarrayadapter;
 import android.app.ListActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -37,7 +39,7 @@ String[] countries;
     String[] capitals;
     String [] flags;
 
-
+    public static final String EXTRA_POSITION = "ee.sinchukov.customarrayadapter.POSITION";
 
     @Override
     public void onCreate(Bundle savedInstance) {
@@ -54,9 +56,20 @@ String[] countries;
             states[i]=new State(countries[i],capitals[i],flagsResource);
         }
 
-        //int arraySize
-
         setListAdapter(new StateAdapter(states));
+
+        // long click
+        AdapterView.OnItemLongClickListener itemLongClickListener = new AdapterView.OnItemLongClickListener(){
+
+            @Override
+            public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+            showInfo(position);
+            return true;
+            }
+        };
+        getListView().setOnItemLongClickListener(itemLongClickListener);
+
+       // click
         AdapterView.OnItemClickListener itemListener = new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View v, int position, long id) {
@@ -69,6 +82,15 @@ String[] countries;
         };
         getListView().setOnItemClickListener(itemListener);
     }
+
+    protected void showInfo(int position){
+        Intent intent = new Intent(this,InfoActivity.class);
+        // pass item position to info screen
+        intent.putExtra(MainActivity.EXTRA_POSITION, position);
+        //show info screen
+        startActivity(intent);
+    }
+
     private State getModel(int position) {
         return(((StateAdapter)getListAdapter()).getItem(position));
     }
